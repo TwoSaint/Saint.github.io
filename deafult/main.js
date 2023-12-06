@@ -32,12 +32,10 @@ function createBall() {
       if (posX < 0 || posX > window.innerWidth - ball.clientWidth) {
         velX = -velX; // Reverse the horizontal velocity
         collision += 1;
-        window.createBall();
       }
       if (posY < 0 || posY > window.innerHeight - ball.clientHeight) {
         velY = -velY; // Reverse the vertical velocity
         collision += 1;
-        window.createBall();z
       }
 
       // Update the ball's position on the screen
