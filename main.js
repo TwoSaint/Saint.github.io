@@ -37,7 +37,7 @@ function createBall() {
       if (posY < 0 || posY > window.innerHeight - ball.clientHeight) {
         velY = -velY; // Reverse the vertical velocity
         collision += 1;
-        window.createBall();z
+        window.createBall();
       }
 
       // Update the ball's position on the screen
