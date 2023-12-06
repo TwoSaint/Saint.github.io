@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: black;
+  }
+  .ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+  }
+  #createButton {
+    margin: 20px;
+    padding: 15px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(63, 63, 63);
+    color: rgb(154, 154, 154);
+  }
+  h1 {
+    color: white;
+    }
