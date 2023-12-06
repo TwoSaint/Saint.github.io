@@ -1,7 +1,8 @@
 // Function to create and animate bouncing balls
 let collision = 0;
-
+let ballCount = 0;
 function createBall() {
+  ballCount += 1;
     // Create a new ball element
     const ballContainer = document.getElementById('ballContainer');
     const ball = document.createElement('div');
@@ -43,6 +44,7 @@ function createBall() {
       ball.style.top = `${posY}px`;
 
       document.getElementById("Collisions").innerHTML = collision;
+      document.getElementById("ballCount").innerHTML = ballCount;
       // Repeat the update using requestAnimationFrame for smooth animation
       requestAnimationFrame(update);
     }
