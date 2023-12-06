@@ -1,5 +1,6 @@
 // Function to create and animate a bouncing ball
 // Function to create and animate a bouncing ball
+let collision = 0;
 function createBall() {
     // Create a new ball element
     const ballContainer = document.getElementById('ballContainer');
@@ -29,15 +30,18 @@ function createBall() {
       // Bounce off the walls if the ball reaches the window boundaries
       if (posX < 0 || posX > window.innerWidth - ball.clientWidth) {
         velX = -velX; // Reverse the horizontal velocity
+        collision += 1;
       }
       if (posY < 0 || posY > window.innerHeight - ball.clientHeight) {
         velY = -velY; // Reverse the vertical velocity
+        collision += 1;
       }
 
       // Update the ball's position on the screen
       ball.style.left = `${posX}px`;
       ball.style.top = `${posY}px`;
 
+      document.getElementById("Collisions").innerHTML = collision;
       // Repeat the update using requestAnimationFrame for smooth animation
       requestAnimationFrame(update);
     }
