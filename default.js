@@ -20,8 +20,8 @@ function createBall() {
     ball.style.backgroundColor = getRandomColor();
 
     // Set initial velocity with random speed and direction
-    let velX = (Math.random() - 0.5) * 10;
-    let velY = (Math.random() - 0.5) * 10;
+    let velX = (Math.random() - 0.5) * 15;
+    let velY = (Math.random() - 0.5) * 15;
 
     // Update ball position and handle bouncing off walls
     function update() {
