@@ -1,26 +1,68 @@
 body {
-    margin: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: black;
-  }
-  .ball {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    position: absolute;
-  }
-  #createButton {
-    margin: 20px;
-    padding: 15px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: rgb(63, 63, 63);
-    color: rgb(154, 154, 154);
-  }
-  h1 {
-    color: white;
-    }
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: black;
+  font-family: 'Silkscreen', sans-serif;
+  
+}
+
+#createButton {
+  margin: 20px;
+  padding: 15px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: rgb(63, 63, 63);
+  color: rgb(154, 154, 154);
+  z-index: 1;
+}
+
+h1 {
+  color: white;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.speed-control {
+  position: absolute;
+  top: 100px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  z-index: 1; /* Ensure the speed control is on top */
+}
+
+input[type='range'] {
+  width: 100px;
+  appearance: none;
+  height: 10px;
+  border-radius: 5px;
+  background: #4a4a4a;
+  outline: none;
+  transform: rotate(270deg); /* Rotate the slider thumb to match the vertical appearance */
+}
+
+#Collisions,
+#ballCount {
+  color: white;
+  z-index: 1; /* Ensure collision count and ball count are on top */
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none; /* Disable pointer events on the canvas */
+}
+

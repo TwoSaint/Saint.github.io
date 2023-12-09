@@ -1,23 +1,38 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="styles.css">
-<script src="default.js"></script>
 <html lang="en">
 <head>
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bouncing Ball</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- Button to create a new ball -->
-<div>
+  <canvas id="ballCanvas"></canvas>
+<!-- collision Count -->
+<div class="fonted" >
   <h1 id="Collisions"></h1>
 </div>
 
+<!-- Speed Control Slider in the top-left corner -->
+<div class="speed-control">
+  <input type="range" id="speedSlider" min="1" max="10" value="5" step="1" onchange="updateSpeed()" class="vertical-slider">
+</div>
+
+<!-- Button to create a new ball -->
 <button id="createButton" onclick="createBall()">Create Ball</button>
-<div>
+
+<!-- Ball Count -->
+<div class="fonted" >
   <h1 id="ballCount"></h1>
 </div>
+
 <!-- Container for the balls -->
 <div id="ballContainer"></div>
+
+<script src="main.js"></script>
 </body>
 </html>
