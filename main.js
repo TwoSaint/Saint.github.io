@@ -118,3 +118,7 @@ document.addEventListener('mousemove', (event) => {
   mouseX = event.clientX;
   mouseY = event.clientY;
 });
+//5 second grab message delay
+setTimeout(() => {
+  document.getElementById('lit-time').style.display = 'block';
+}, 7500);

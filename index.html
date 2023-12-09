@@ -11,23 +11,31 @@
   <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <canvas id="ballCanvas"></canvas>
-<!-- collision Count -->
-<div class="fonted" >
-  <h1 id="Collisions"></h1>
-</div>
 
-<!-- Speed Control Slider in the top-left corner -->
+<!-- collision Count -->
 <div class="speed-control">
   <input type="range" id="speedSlider" min="1" max="10" value="5" step="1" onchange="updateSpeed()" class="vertical-slider">
 </div>
+<!-- Top left div-->
+<div class="top-UI">
+  <div class="fonted" >
+    <h1 id="Collisions"></h1>
+  </div>
 
-<!-- Button to create a new ball -->
-<button id="createButton" onclick="createBall()">Create Ball</button>
-
-<!-- Ball Count -->
-<div class="fonted" >
+  <!-- Speed Control Slider in the top-left corner -->
+  
+  <!-- Ball Count -->
+  <div class="fonted" >
   <h1 id="ballCount"></h1>
+  </div>
+</div>
+<!-- Middl Div -->
+<div class="central-UI">
+  <!-- Button to create a new ball -->
+  <button id="createButton" onclick="createBall()">Create Ball</button>
+  <div>
+    <h1 id="lit-time" style="display:none;">Grab a ball!</h1>
+  </div>
 </div>
 
 <!-- Container for the balls -->
